@@ -7,8 +7,7 @@ class Solution:
             if char not in brackets:
                 stack.append(char)
             else:
-                if not stack or stack[-1] != brackets[char]:
+                if not stack or stack.pop() != brackets[char]:
                     return False
-                stack.pop()
         return not stack
         
